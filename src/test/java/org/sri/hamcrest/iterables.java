@@ -9,9 +9,7 @@ import java.util.List;
 import static org.hamcrest.CoreMatchers.containsString;
 import static org.hamcrest.CoreMatchers.endsWith;
 import static org.hamcrest.CoreMatchers.instanceOf;
-import static org.hamcrest.Matchers.contains;
-import static org.hamcrest.Matchers.containsInAnyOrder;
-import static org.hamcrest.Matchers.greaterThanOrEqualTo;
+import static org.hamcrest.Matchers.*;
 import static org.hamcrest.core.Every.everyItem;
 import static org.hamcrest.core.IsCollectionContaining.hasItems;
 import static org.junit.Assert.assertThat;
@@ -20,6 +18,14 @@ import static org.junit.Assert.assertThat;
  * Created by sridhar.easwaran on 2/2/2017.
  */
 public class iterables {
+
+    List<String> regionalBreweries = Lists.newArrayList(
+            "Capital Brewery",
+            "City Brewing Company ",
+            "Jacob Leinenkugel Brewing Company",
+            "Lakefront Brewery",
+            "New Glarus Brewing Company",
+            "Stevens Point Brewery");
 
     @Test
     public void hamcrest_core_every() {
@@ -73,5 +79,11 @@ public class iterables {
     public void hamcrest_core_containsInAnyOrder() {
         /** Order of items doesn't matter, given all items are present */
         assertThat(Arrays.asList("foo", "bar"), containsInAnyOrder("bar", "foo"));
+    }
+
+    @Test
+    public void iterableWithSize_test() {
+        assertThat(Arrays.asList("foo", "bar"), iterableWithSize(2));
+        assertThat(regionalBreweries, iterableWithSize(regionalBreweries.size()));
     }
 }
