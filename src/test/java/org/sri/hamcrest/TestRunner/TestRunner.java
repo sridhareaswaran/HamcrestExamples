@@ -18,7 +18,8 @@ import org.sri.hamcrest.*;
         maps.class,
         iterables.class,
         collections.class,
-        beans.class
+        beans.class,
+        xml.class
 })
 public class TestRunner {
 }
