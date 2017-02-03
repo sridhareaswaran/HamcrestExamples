@@ -33,7 +33,7 @@ public class xml {
 
         Document xml = parse(aListApartXML);
 
-        assertThat(xml, hasXPath("/daily-values/saturated-fat", is(equalTo("20"))));
+        assertThat(xml, hasXPath("/daily-values/saturated-fat", equalTo("20")));
     }
 
     private static Document parse(String xml) throws Exception {
