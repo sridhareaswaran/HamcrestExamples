@@ -1,0 +1,21 @@
+group 'org.sri.hamcrest'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+
+    //Junit 4.11 and later versions has only hamcrest-core as transitive dependency
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+
+    //To make use of all the matchers in hamcrest, use hamcrest-all
+    testCompile group: 'org.hamcrest', name: 'hamcrest-all', version: '1.3'
+
+    compile group: 'com.google.guava', name: 'guava', version: '21.0'
+}
