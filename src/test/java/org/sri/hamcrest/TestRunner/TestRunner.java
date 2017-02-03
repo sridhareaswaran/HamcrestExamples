@@ -11,6 +11,7 @@ import org.sri.hamcrest.*;
 
 @RunWith(Suite.class)
 @SuiteClasses({
+        arrays.class,
         general.class,
         strings.class,
         machersMix.class,
