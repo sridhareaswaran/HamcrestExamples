@@ -19,6 +19,6 @@ public class iterables {
     public void hamcrest_core_every () {
         List<Integer> ages = Lists.newArrayList(21, 25, 30, 18);
         assertThat(ages, everyItem(greaterThanOrEqualTo(18)));
-        assertThat(ages, everyItem(instanceOf(Integer)));
+        assertThat(ages, everyItem(instanceOf(Integer.class)));
     }
 }

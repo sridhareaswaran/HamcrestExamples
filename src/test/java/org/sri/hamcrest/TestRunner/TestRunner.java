@@ -14,6 +14,7 @@ import org.sri.hamcrest.*;
         general.class,
         strings.class,
         machersMix.class,
+        iterables.class,
         collections.class
 })
 public class TestRunner {
